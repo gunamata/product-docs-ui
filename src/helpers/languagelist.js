@@ -19,13 +19,16 @@ const getModules = (navigation) => {
 }
 
 module.exports = (navigation, uiRootPath) => {
-  navigation.forEach((nav) => getModules(nav))
-  const res = languagesList.filter((lang) => modules.has(lang.id))
-  const finalResponse = res.map((item) => {
-    return {
-      ...item,
-      uiRootPath,
-    }
-  })
+  let finalResponse = []
+  if (Array.isArray(navigation)) {
+    navigation.forEach((nav) => getModules(nav))
+    const res = languagesList.filter((lang) => modules.has(lang.id))
+    finalResponse = res.map((item) => {
+      return {
+        ...item,
+        uiRootPath,
+      }
+    })
+  }
   return finalResponse
 }
