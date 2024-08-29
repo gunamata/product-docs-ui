@@ -6,8 +6,8 @@ const extractModuleFromURL = (url) => url.split('/')[3] || null
 const languagesList = [
   { id: 'en', image: 'engFlag.svg', class: 'english', label: 'English' },
   { id: 'zh', image: 'china.svg', class: 'china', label: '中文' },
-  { id: 'ko', image: 'koFlag.svg', class: 'ko', label: '한국어' },
-  { id: 'ja', image: 'jaFlag.svg', class: 'ja', label: '日本語' },
+  { id: 'ko', image: 'koFlag.svg', class: 'korea', label: '한국어' },
+  { id: 'ja', image: 'jaFlag.svg', class: 'japan', label: '日本語' },
 ]
 
 const getModules = (navigation) => {
