@@ -12,6 +12,11 @@
   font-weight: var(--monospace-font-weight-bold);
 }
 
+.hljs-keyword {
+  color: #ccc;
+  font-weight: var(--monospace-font-weight-bold);
+}
+
 .hljs-number,
 .hljs-literal,
 .hljs-variable,
